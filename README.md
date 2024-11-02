@@ -1,6 +1,6 @@
-# Smart Dashboard Pajak Kendaraan dan PBB
+# Toko Smart 
 
-Smart Dashboard Pajak Kendaraan dan PBB adalah sebuah aplikasi berbasis web yang dirancang untuk memudahkan pengelolaan dan monitoring pembayaran pajak kendaraan dan Pajak Bumi dan Bangunan (PBB). Aplikasi ini dibangun menggunakan framework Laravel 11.
+
 
 ## Fitur Utama
 
