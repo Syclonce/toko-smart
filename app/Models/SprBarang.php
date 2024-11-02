@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class StaBarang extends Model
+class SprBarang extends Model
 {
-   use HasFactory;
-    protected $table = 'sta_barangs';
+    use HasFactory;
+    protected $table = 'spr_barangs';
     protected $fillable = [
         'nama',
+        'alamat', 
+        'telepon',
     ];
 
     public function purchases()

@@ -31,13 +31,18 @@ Route::middleware(['auth', 'verified', 'role:Super-Admin'])->group(function () {
     Route::get('/Barang', [BarangController::class, 'index'])->name('Barang');
 
     // Kategori Barang
-    Route::get('/barang/ktgbarang', [BarangController::class, 'ktgbarang'])->name('kategori.barang');
-    Route::post('/barang/ktgbarang/add', [BarangController::class, 'addktgbarang'])->name('kategori.barang.add');
+    Route::get('master/barang/ktgbarang', [BarangController::class, 'ktgbarang'])->name('master.kategori.barang');
+    Route::post('master/barang/ktgbarang/add', [BarangController::class, 'addktgbarang'])->name('kategori.barang.add');
     // Satuan Barang
-    Route::get('/barang/stabarang', [BarangController::class, 'stabarang'])->name('stabarang.barang');
-    Route::post('/barang/stabarang/add', [BarangController::class, 'addstabarang'])->name('stabarang.barang.add');
+    Route::get('master/barang/stabarang', [BarangController::class, 'stabarang'])->name('master.stabarang.barang');
+    Route::post('master/barang/stabarang/add', [BarangController::class, 'addstabarang'])->name('stabarang.barang.add');
+    // Suplayer Barang
+    Route::get('master/barang/sprbarang', [BarangController::class, 'sprbarang'])->name('master.sprbarang.barang');
+    Route::post('master/barang/sprbarang/add', [BarangController::class, 'addsprbarang'])->name('sprbarang.barang.add');
+
     // Pembelian Barang
     Route::get('/barang/pblbarang', [BarangController::class, 'pblbarang'])->name('pblbarang.barang');
+    Route::post('/barang/pblbarang/add', [BarangController::class, 'addpblbarang'])->name('pblbarang.barang.add');
 
 
     Route::get('/superadmin', [SuperAdminController::class, 'index'])->name('superadmin');

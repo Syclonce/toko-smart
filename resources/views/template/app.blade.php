@@ -313,7 +313,45 @@
                                 <p>Dashboard</p>
                             </a>
                         </li>
+                        <li class="nav-item {{ \Route::is('master*') ? 'menu-open' : '' }}">
+                            <a href="#" class="nav-link {{ \Route::is('master*') ? 'active' : '' }}">
+                                <i class="fas fa-fw fa-solid fa-box" style="color: #63E6BE; font-size: 1.2rem;"></i>
+                              <p style="margin-left: 10px;">
+                                Master Data
+                                <i class="right fas fa-angle-left"></i>
+                              </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                              <li class="nav-item">
+                                <a href="{{ route('master.kategori.barang') }}" class="nav-link {{ \Route::is('master.kategori.barang') ? 'active' : '' }}">
+                                    <i class="fas fa-fw fa-solid fa-user-plus" style="color: #63E6BE;"></i>
+                                  <p>Kategori Barang</p>
+                                </a>
+                              </li>                              
+                              <li class="nav-item">
+                                <a href="{{ route('master.stabarang.barang') }}" class="nav-link {{ \Route::is('master.stabarang.barang') ? 'active' : '' }}">
+                                    <i class="fas fa-fw fa-solid fa-user-plus" style="color: #63E6BE;"></i>
+                                  <p>Satuan Barang</p>
+                                </a>
+                              </li>                              
+                              <li class="nav-item">
+                                <a href="{{ route('master.sprbarang.barang') }}" class="nav-link {{ \Route::is('master.sprbarang.barang') ? 'active' : '' }}">
+                                    <i class="fas fa-fw fa-solid fa-user-plus" style="color: #63E6BE;"></i>
+                                  <p>Suplayer Barang</p>
+                                </a>
+                              </li>                              
+                            </ul>
+                        </li>
 
+                        <li class="nav-item">
+                            <a href="{{ route('pblbarang.barang') }}"
+                                class="nav-link {{ \Route::is('pblbarang.barang') ? 'active' : '' }}">
+                                <i class="nav-icon fas fa-cogs"></i>
+                                <p>
+                                    Barang Masuk
+                                </p>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ route('setweb') }}"
                                 class="nav-link {{ \Route::is('setweb') ? 'active' : '' }}">
@@ -364,7 +402,8 @@
    <script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
    <!-- InputMask -->
    <script src="{{ asset('plugins/moment/moment.min.js') }}"></script>
-   <script src="{{ asset('plugins/inputmask/jquery.inputmask.min.js') }}"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
+   {{-- <script src="{{ asset('plugins/inputmask/jquery.inputmask.min.js') }}"></script> --}}
    <!-- Bootstrap 4 -->
    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
    <!-- ChartJS -->
